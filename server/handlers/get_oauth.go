@@ -5,11 +5,11 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/keratin/authn-server/lib"
-	"github.com/keratin/authn-server/lib/route"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/lib"
+	"github.com/keratin/authn/lib/route"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/tokens/oauth"
+	"github.com/keratin/authn/tokens/oauth"
 )
 
 func GetOauth(app *app.App, providerName string) http.HandlerFunc {

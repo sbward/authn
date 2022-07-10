@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/keratin/authn-server/server/handlers"
+	"github.com/keratin/authn/server/handlers"
 )
 
 func ReadBody(res *http.Response) []byte {

@@ -5,9 +5,9 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/keratin/authn-server/app/services"
-	"github.com/keratin/authn-server/lib/route"
-	"github.com/keratin/authn-server/server/test"
+	"github.com/keratin/authn/lib/route"
+	"github.com/keratin/authn/server/test"
+	"github.com/keratin/authn/services"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -64,7 +64,7 @@ func TestPostAccountsImport(t *testing.T) {
 		res, err := client.PostJSON("/accounts/import", map[string]interface{}{
 			"username": "jsonunlocked@app.com",
 			"password": "secret",
-			"locked": "false",
+			"locked":   "false",
 		})
 		require.NoError(t, err)
 		assert.Equal(t, http.StatusCreated, res.StatusCode)

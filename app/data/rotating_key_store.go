@@ -3,7 +3,7 @@ package data
 import (
 	"sync"
 
-	"github.com/keratin/authn-server/app/data/private"
+	"github.com/keratin/authn/data/private"
 )
 
 // RotatingKeyStore is a KeyStore that may be rotated by a maintainer.

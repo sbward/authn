@@ -6,9 +6,9 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"github.com/jmoiron/sqlx"
-	dataRedis "github.com/keratin/authn-server/app/data/redis"
-	"github.com/keratin/authn-server/app/data/sqlite3"
-	"github.com/keratin/authn-server/ops"
+	dataRedis "github.com/keratin/authn/data/redis"
+	"github.com/keratin/authn/data/sqlite3"
+	"github.com/keratin/authn/ops"
 )
 
 type BlobStore interface {

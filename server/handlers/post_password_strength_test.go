@@ -1,12 +1,13 @@
 package handlers_test
 
 import (
-	"github.com/keratin/authn-server/app/services"
-	"github.com/keratin/authn-server/lib/route"
-	"github.com/keratin/authn-server/server/test"
-	"github.com/stretchr/testify/require"
 	"net/url"
 	"testing"
+
+	"github.com/keratin/authn/lib/route"
+	"github.com/keratin/authn/server/test"
+	"github.com/keratin/authn/services"
+	"github.com/stretchr/testify/require"
 )
 
 func TestPostPasswordScore(t *testing.T) {
@@ -42,4 +43,3 @@ func TestPostPasswordScore(t *testing.T) {
 	})
 
 }
-

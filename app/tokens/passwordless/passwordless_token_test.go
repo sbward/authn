@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/tokens/passwordless"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/tokens/passwordless"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/keratin/authn-server/lib/route"
+	"github.com/keratin/authn/lib/route"
 )
 
 func ExampleRoute() {

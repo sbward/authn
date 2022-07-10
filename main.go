@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data"
-	"github.com/keratin/authn-server/server"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/data"
+	"github.com/keratin/authn/server"
 	"github.com/sirupsen/logrus"
 
 	"os"

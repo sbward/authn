@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/keratin/authn-server/app/data"
-	"github.com/keratin/authn-server/app/models"
+	"github.com/keratin/authn/data"
+	"github.com/keratin/authn/models"
 )
 
 func SessionEnder(

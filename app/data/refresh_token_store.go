@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/keratin/authn-server/ops"
+	"github.com/keratin/authn/ops"
 
 	"github.com/go-redis/redis/v8"
 	"github.com/jmoiron/sqlx"
-	dataRedis "github.com/keratin/authn-server/app/data/redis"
-	"github.com/keratin/authn-server/app/data/sqlite3"
-	"github.com/keratin/authn-server/app/models"
+	dataRedis "github.com/keratin/authn/data/redis"
+	"github.com/keratin/authn/data/sqlite3"
+	"github.com/keratin/authn/models"
 )
 
 type RefreshTokenStore interface {

@@ -6,12 +6,12 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/keratin/authn-server/ops"
+	"github.com/keratin/authn/ops"
 	"github.com/pkg/errors"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/keratin/authn-server/lib"
-	"github.com/keratin/authn-server/app/models"
+	"github.com/keratin/authn/lib"
+	"github.com/keratin/authn/models"
 )
 
 type RefreshTokenStore struct {

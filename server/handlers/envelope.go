@@ -2,10 +2,11 @@ package handlers
 
 import (
 	"encoding/json"
-	"github.com/keratin/authn-server/lib/parse"
 	"net/http"
 
-	"github.com/keratin/authn-server/app/services"
+	"github.com/keratin/authn/lib/parse"
+
+	"github.com/keratin/authn/services"
 )
 
 type ServiceData struct {
@@ -31,16 +32,16 @@ func WriteErrors(w http.ResponseWriter, err error) {
 	case parse.Error:
 		writeParseErrors(w, err.(parse.Error))
 	default:
-		WriteJSON(w, http.StatusInternalServerError, RequestError{Error:err.Error()})
+		WriteJSON(w, http.StatusInternalServerError, RequestError{Error: err.Error()})
 	}
 }
 
 func writeParseErrors(w http.ResponseWriter, err parse.Error) {
 	switch err.Code {
 	case parse.UnsupportedMediaType:
-		WriteJSON(w, http.StatusUnsupportedMediaType, RequestError{Error:err.Message})
+		WriteJSON(w, http.StatusUnsupportedMediaType, RequestError{Error: err.Message})
 	default:
-		WriteJSON(w, http.StatusBadRequest, RequestError{Error:err.Message})
+		WriteJSON(w, http.StatusBadRequest, RequestError{Error: err.Message})
 	}
 }
 

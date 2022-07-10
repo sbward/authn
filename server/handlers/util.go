@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/tokens/oauth"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/tokens/oauth"
 	"github.com/pkg/errors"
 )
 

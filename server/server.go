@@ -2,9 +2,10 @@ package server
 
 import (
 	"fmt"
-	"github.com/keratin/authn-server/app"
 	"log"
 	"net/http"
+
+	app "github.com/keratin/authn"
 )
 
 func Server(app *app.App) {

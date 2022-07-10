@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/data"
 	"github.com/pkg/errors"
 	jose "gopkg.in/square/go-jose.v2"
 	jwt "gopkg.in/square/go-jose.v2/jwt"

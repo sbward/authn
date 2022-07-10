@@ -3,9 +3,9 @@ package services
 import (
 	"strings"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data"
-	"github.com/keratin/authn-server/app/models"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/data"
+	"github.com/keratin/authn/models"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/bcrypt"
 )

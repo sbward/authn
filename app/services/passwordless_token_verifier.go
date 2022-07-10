@@ -3,11 +3,11 @@ package services
 import (
 	"strconv"
 
-	"github.com/keratin/authn-server/ops"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/ops"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data"
-	"github.com/keratin/authn-server/app/tokens/passwordless"
+	"github.com/keratin/authn/data"
+	"github.com/keratin/authn/tokens/passwordless"
 	"github.com/pkg/errors"
 )
 

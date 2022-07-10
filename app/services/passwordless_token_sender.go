@@ -4,9 +4,9 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/models"
-	"github.com/keratin/authn-server/app/tokens/passwordless"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/models"
+	"github.com/keratin/authn/tokens/passwordless"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )

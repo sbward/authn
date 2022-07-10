@@ -7,12 +7,12 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/keratin/authn-server/lib/oauth"
-	"github.com/keratin/authn-server/app/services"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/lib/oauth"
+	"github.com/keratin/authn/services"
 	"golang.org/x/oauth2"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data/mock"
+	"github.com/keratin/authn/data/mock"
 )
 
 func TestIdentityReconciler(t *testing.T) {

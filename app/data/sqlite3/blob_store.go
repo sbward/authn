@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/keratin/authn-server/ops"
+	"github.com/keratin/authn/ops"
 	sq3 "github.com/mattn/go-sqlite3"
 	"github.com/pkg/errors"
 )

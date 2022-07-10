@@ -1,7 +1,7 @@
 package data
 
 import (
-	"github.com/keratin/authn-server/app/data/private"
+	"github.com/keratin/authn/data/private"
 )
 
 type KeyStore interface {

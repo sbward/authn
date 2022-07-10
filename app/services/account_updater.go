@@ -3,8 +3,8 @@ package services
 import (
 	"strings"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/data"
 	"github.com/pkg/errors"
 )
 

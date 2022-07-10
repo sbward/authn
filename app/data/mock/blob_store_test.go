@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/keratin/authn-server/app/data/mock"
-	"github.com/keratin/authn-server/app/data/testers"
+	"github.com/keratin/authn/data/mock"
+	"github.com/keratin/authn/data/testers"
 )
 
 func TestBlobStore(t *testing.T) {

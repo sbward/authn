@@ -4,9 +4,10 @@ import (
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/pem"
-	"github.com/keratin/authn-server/app/data/private"
 	"math/rand"
 	"testing"
+
+	"github.com/keratin/authn/data/private"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

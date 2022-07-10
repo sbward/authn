@@ -1,13 +1,14 @@
 package handlers
 
 import (
-	"github.com/keratin/authn-server/lib/parse"
 	"net/http"
 	"strconv"
 
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/lib/parse"
+
 	"github.com/gorilla/mux"
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/services"
+	"github.com/keratin/authn/services"
 )
 
 func PatchAccount(app *app.App) http.HandlerFunc {

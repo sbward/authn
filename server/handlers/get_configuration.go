@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/keratin/authn-server/app"
+	app "github.com/keratin/authn"
 )
 
 func GetConfiguration(app *app.App) http.HandlerFunc {

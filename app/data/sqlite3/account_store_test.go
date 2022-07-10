@@ -3,8 +3,8 @@ package sqlite3_test
 import (
 	"testing"
 
-	"github.com/keratin/authn-server/app/data/sqlite3"
-	"github.com/keratin/authn-server/app/data/testers"
+	"github.com/keratin/authn/data/sqlite3"
+	"github.com/keratin/authn/data/testers"
 	"github.com/stretchr/testify/require"
 )
 

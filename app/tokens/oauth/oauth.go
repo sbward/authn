@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/keratin/authn-server/app"
+	app "github.com/keratin/authn"
 	"github.com/pkg/errors"
 	jose "gopkg.in/square/go-jose.v2"
 	jwt "gopkg.in/square/go-jose.v2/jwt"
@@ -68,7 +68,7 @@ func Parse(tokenStr string, cfg *app.Config, nonce string) (*Claims, error) {
 // New creates Claims for a JWT suitable as a state parameter during an OAuth flow.
 func New(cfg *app.Config, nonce string, destination string) (*Claims, error) {
 	return &Claims{
-		Scope: scope,
+		Scope:                    scope,
 		RequestForgeryProtection: nonce,
 		Destination:              destination,
 		Claims: jwt.Claims{

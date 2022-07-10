@@ -2,11 +2,12 @@ package services
 
 import (
 	"encoding/hex"
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data"
-	"github.com/keratin/authn-server/lib"
-	"github.com/keratin/authn-server/lib/oauth"
-	"github.com/keratin/authn-server/app/models"
+
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/data"
+	"github.com/keratin/authn/lib"
+	"github.com/keratin/authn/lib/oauth"
+	"github.com/keratin/authn/models"
 	"github.com/pkg/errors"
 	"golang.org/x/oauth2"
 )

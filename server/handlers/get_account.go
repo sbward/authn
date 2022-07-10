@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/services"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/services"
 )
 
 func GetAccount(app *app.App) http.HandlerFunc {

@@ -5,11 +5,11 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data/mock"
-	"github.com/keratin/authn-server/app/models"
-	"github.com/keratin/authn-server/app/services"
-	"github.com/keratin/authn-server/ops"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/data/mock"
+	"github.com/keratin/authn/models"
+	"github.com/keratin/authn/ops"
+	"github.com/keratin/authn/services"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"

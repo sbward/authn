@@ -1,0 +1,336 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
+
+
+# Make data base, printed on Sat Jul  9 15:50:02 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/sam/GitHub/authn
+# makefile
+SHELL = /bin/sh
+# makefile (from `Makefile', line 8)
+BIN := /Users/sam/GitHub/authn/bin
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `.env', line 1)
+MAKEFILE_LIST :=  Makefile .env
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# makefile (from `Makefile', line 5)
+VERSION := 1.15.0
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/7p/twkr4hqx4r5bz5vzhy1tbksh0000gn/T/vscode-ipc-f26a530b-8013-4b7c-a4a1-b48ff4086a65.sock
+# environment
+VSCODE_CWD = /
+# environment
+GOPROXY = https://proxy.golang.org,direct
+# makefile (from `Makefile', line 10)
+PATH := /Users/sam/GitHub/authn/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin
+# makefile (from `Makefile', line 3)
+PROJECT := authn-server
+# environment
+GOPATH = /Users/sam/go
+# environment
+LaunchInstanceID = 9B131213-2659-4414-9EEC-34771D760B37
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.gatrmX8ww7/Listeners
+# automatic
+%F = $(notdir $%)
+# makefile (from `Makefile', line 9)
+GOBIN := /Users/sam/GitHub/authn/bin
+# environment
+DISPLAY = /private/tmp/com.apple.launchd.X9L9DeGqOK/org.macosforge.xquartz:0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/sam/GitHub/authn
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+GOMODCACHE = /Users/sam/go/pkg/mod
+# environment
+HOME = /Users/sam
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/sam/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+# environment
+LOGNAME = sam
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = sam
+# makefile
+.DEFAULT_GOAL := clean
+# environment
+GOROOT = /usr/local/go
+# makefile (from `Makefile', line 4)
+NAME := keratin/authn-server
+# makefile (from `Makefile', line 2)
+ORG := keratin
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/7p/twkr4hqx4r5bz5vzhy1tbksh0000gn/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/sam/Library/Application Support/Code/1.68.1-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from `Makefile', line 6)
+MAIN := main.go
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.58180965.58180971
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a6
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+VSCODE_PID = 455
+# variable set hash-table stats:
+# Load=76/1024=7%, Rehash=0, Collisions=2/112=2%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777222, inode 61071271): 27 files, no impossibilities.
+
+# 27 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: clean server test benchmarks migrate release
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+benchmarks:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 40):
+	docker-compose up -d redis
+	TEST_REDIS_URL=redis://127.0.0.1:8701/12 \
+	go test -run=XXX -bench=. \
+	github.com/keratin/authn-server/server/meta \
+	github.com/keratin/authn-server/server/sessions
+	
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-04 11:02:54
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+server: init
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 23):
+	docker-compose up -d redis
+	DATABASE_URL=sqlite3://localhost/dev \
+	REDIS_URL=redis://127.0.0.1:8701/11 \
+	go run -ldflags "-X main.VERSION=$(VERSION)" $(MAIN)
+	
+
+test: init
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 31):
+	docker-compose up -d redis mysql postgres
+	TEST_REDIS_URL=redis://127.0.0.1:8701/12 \
+	TEST_MYSQL_URL=mysql://root@127.0.0.1:8702/authnservertest \
+	TEST_POSTGRES_URL=postgres://$(DB_USERNAME):$(DB_PASSWORD)@127.0.0.1:8703/postgres?sslmode=disable \
+	go test -race ./...
+	
+
+# Not a target:
+.env:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-09 14:54:24
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+migrate:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 49):
+	docker-compose up -d redis
+	DATABASE_URL=sqlite3://localhost/dev \
+	REDIS_URL=redis://127.0.0.1:8701/11 \
+	go run -ldflags "-X main.VERSION=$(VERSION)" $(MAIN) migrate
+	
+
+release:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 60):
+	git push
+	git tag v$(VERSION)
+	git push --tags
+	open https://github.com/$(NAME)/releases/tag/v$(VERSION)
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+/Users/sam/GitHub/authn/bin/ego:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 66):
+	go install github.com/benbjohnson/ego/...
+	
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 14):
+	rm -rf dist
+	
+
+init: /Users/sam/GitHub/authn/bin/ego
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 17):
+	go install
+	$(BIN)/ego server/views
+	
+
+# files hash-table stats:
+# Load=14/1024=1%, Rehash=0, Collisions=0/41=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 2
+# # of strcache buffers: 1
+ 
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4082 / max = 4082 / min = 4082 / avg = 4082
+
+# Finished Make data base on Sat Jul  9 15:50:02 2022
+
+ 

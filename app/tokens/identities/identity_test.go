@@ -4,14 +4,14 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/keratin/authn-server/app/data/private"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/data/private"
 
 	"gopkg.in/square/go-jose.v2"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data/mock"
-	"github.com/keratin/authn-server/app/tokens/identities"
-	"github.com/keratin/authn-server/app/tokens/sessions"
+	"github.com/keratin/authn/data/mock"
+	"github.com/keratin/authn/tokens/identities"
+	"github.com/keratin/authn/tokens/sessions"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

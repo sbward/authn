@@ -1,13 +1,13 @@
 package services
 
 import (
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/data"
-	"github.com/keratin/authn-server/lib/route"
-	"github.com/keratin/authn-server/app/models"
-	"github.com/keratin/authn-server/ops"
-	"github.com/keratin/authn-server/app/tokens/identities"
-	"github.com/keratin/authn-server/app/tokens/sessions"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/data"
+	"github.com/keratin/authn/lib/route"
+	"github.com/keratin/authn/models"
+	"github.com/keratin/authn/ops"
+	"github.com/keratin/authn/tokens/identities"
+	"github.com/keratin/authn/tokens/sessions"
 	"github.com/pkg/errors"
 )
 

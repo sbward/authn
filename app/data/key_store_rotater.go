@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/keratin/authn-server/app/data/private"
-	"github.com/keratin/authn-server/lib"
-	"github.com/keratin/authn-server/ops"
+	"github.com/keratin/authn/data/private"
+	"github.com/keratin/authn/lib"
+	"github.com/keratin/authn/ops"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )

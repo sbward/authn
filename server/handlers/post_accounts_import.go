@@ -1,12 +1,13 @@
 package handlers
 
 import (
-	"github.com/keratin/authn-server/lib/parse"
 	"net/http"
 	"regexp"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/services"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/lib/parse"
+
+	"github.com/keratin/authn/services"
 )
 
 func PostAccountsImport(app *app.App) http.HandlerFunc {
@@ -14,7 +15,7 @@ func PostAccountsImport(app *app.App) http.HandlerFunc {
 		var user struct {
 			Username string
 			Password string
-			Locked string
+			Locked   string
 		}
 		if err := parse.Payload(r, &user); err != nil {
 			WriteErrors(w, err)

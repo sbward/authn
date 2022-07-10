@@ -3,12 +3,12 @@ package data
 import (
 	"fmt"
 
-	"github.com/keratin/authn-server/app/data/postgres"
+	"github.com/keratin/authn/data/postgres"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/keratin/authn-server/app/data/mysql"
-	"github.com/keratin/authn-server/app/data/sqlite3"
-	"github.com/keratin/authn-server/app/models"
+	"github.com/keratin/authn/data/mysql"
+	"github.com/keratin/authn/data/sqlite3"
+	"github.com/keratin/authn/models"
 )
 
 type AccountStore interface {

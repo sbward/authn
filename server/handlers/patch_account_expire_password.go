@@ -5,8 +5,8 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/services"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/services"
 )
 
 func PatchAccountExpirePassword(app *app.App) http.HandlerFunc {

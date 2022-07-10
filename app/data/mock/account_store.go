@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/keratin/authn-server/app/models"
+	"github.com/keratin/authn/models"
 )
 
 type Error struct {

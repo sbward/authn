@@ -1,7 +1,7 @@
 package mock
 
 import (
-	"github.com/keratin/authn-server/app/data/private"
+	"github.com/keratin/authn/data/private"
 )
 
 type keyStore struct {

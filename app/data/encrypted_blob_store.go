@@ -1,6 +1,6 @@
 package data
 
-import "github.com/keratin/authn-server/lib/compat"
+import "github.com/keratin/authn/lib/compat"
 
 type EncryptedBlobStore struct {
 	store         BlobStore

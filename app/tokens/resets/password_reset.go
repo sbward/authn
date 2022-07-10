@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/keratin/authn-server/app"
+	app "github.com/keratin/authn"
 	"github.com/pkg/errors"
 	jose "gopkg.in/square/go-jose.v2"
 	jwt "gopkg.in/square/go-jose.v2/jwt"
@@ -14,7 +14,7 @@ import (
 const scope = "reset"
 
 type Claims struct {
-	Scope string          `json:"scope"`
+	Scope string           `json:"scope"`
 	Lock  *jwt.NumericDate `json:"lock"`
 	jwt.Claims
 }

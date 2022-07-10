@@ -1,11 +1,12 @@
 package handlers
 
 import (
-	"github.com/keratin/authn-server/lib/parse"
 	"net/http"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/services"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/lib/parse"
+
+	"github.com/keratin/authn/services"
 )
 
 func PostPasswordScore(app *app.App) http.HandlerFunc {

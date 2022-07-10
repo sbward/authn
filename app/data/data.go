@@ -8,12 +8,16 @@ import (
 
 	my "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"github.com/keratin/authn-server/app/data/mock"
-	"github.com/keratin/authn-server/app/data/mysql"
-	"github.com/keratin/authn-server/app/data/postgres"
-	"github.com/keratin/authn-server/app/data/sqlite3"
+	"github.com/keratin/authn/data/mock"
+	"github.com/keratin/authn/data/mysql"
+	"github.com/keratin/authn/data/postgres"
+	"github.com/keratin/authn/data/sqlite3"
 	sq3 "github.com/mattn/go-sqlite3"
 )
+
+type Migrator interface {
+	MigrateDB(db *sqlx.DB) error
+}
 
 func NewDB(url *url.URL) (*sqlx.DB, error) {
 	switch url.Scheme {

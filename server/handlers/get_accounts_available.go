@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/keratin/authn-server/app"
-	"github.com/keratin/authn-server/app/services"
+	app "github.com/keratin/authn"
+	"github.com/keratin/authn/services"
 )
 
 func GetAccountsAvailable(app *app.App) http.HandlerFunc {
