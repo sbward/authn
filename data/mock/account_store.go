@@ -5,6 +5,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/keratin/authn/v2/data"
 	"github.com/keratin/authn/v2/models"
 )
 
@@ -62,7 +63,7 @@ func (s *accountStore) FindByOauthAccount(provider string, providerID string) (*
 
 func (s *accountStore) Create(u string, p []byte) (*models.Account, error) {
 	if s.idByUsername[strings.ToLower(u)] != 0 {
-		return nil, Error{ErrNotUnique}
+		return nil, data.NewUniquenessError(Error{ErrNotUnique})
 	}
 
 	now := time.Now()
@@ -82,11 +83,11 @@ func (s *accountStore) Create(u string, p []byte) (*models.Account, error) {
 func (s *accountStore) AddOauthAccount(accountID int, provider string, providerID string, tok string) error {
 	p := provider + "|" + providerID
 	if s.idByOauthID[p] != 0 {
-		return Error{ErrNotUnique}
+		return data.NewUniquenessError(Error{ErrNotUnique})
 	}
 	for _, oa := range s.oauthAccountsByID[accountID] {
 		if oa.Provider == provider {
-			return Error{ErrNotUnique}
+			return data.NewUniquenessError(Error{ErrNotUnique})
 		}
 	}
 
@@ -184,7 +185,7 @@ func (s *accountStore) UpdateUsername(id int, u string) (bool, error) {
 	}
 
 	if s.idByUsername[uNormalized] != 0 && s.idByUsername[uNormalized] != id {
-		return false, Error{ErrNotUnique}
+		return false, data.NewUniquenessError(Error{ErrNotUnique})
 	}
 
 	account.Username = u

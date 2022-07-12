@@ -1,9 +1,31 @@
 package data
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
-var ErrNotUnique = errors.New("Value is not unique")
+type UniquenessError struct {
+	Wrap error
+}
+
+var _ error = (*UniquenessError)(nil)
+
+func (u UniquenessError) Error() string {
+	return fmt.Sprintf("Uniqueness error: %s", u.Wrap.Error())
+}
+
+func (u UniquenessError) Unwrap() error {
+	return u.Wrap
+}
+
+func NewUniquenessError(err error) error {
+	return UniquenessError{
+		Wrap: err,
+	}
+}
 
 func IsUniquenessError(err error) bool {
-	return err == ErrNotUnique
+	notUnique := &UniquenessError{}
+	return errors.As(err, notUnique)
 }

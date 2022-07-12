@@ -67,7 +67,7 @@ func (db *AccountStore) Create(u string, p []byte) (*models.Account, error) {
 	)
 	if err != nil {
 		if i, ok := err.(sqlite3.Error); ok && i.ExtendedCode == sqlite3.ErrConstraintUnique {
-			return nil, data.ErrNotUnique
+			return nil, data.NewUniquenessError(err)
 		}
 		return nil, err
 	}
@@ -96,7 +96,7 @@ func (db *AccountStore) AddOauthAccount(accountID int, provider string, provider
 		"updated_at":   now,
 	})
 	if i, ok := err.(sqlite3.Error); ok && i.ExtendedCode == sqlite3.ErrConstraintUnique {
-		return data.ErrNotUnique
+		return data.NewUniquenessError(err)
 	}
 	return err
 }
@@ -149,7 +149,7 @@ func (db *AccountStore) SetLastLogin(id int) (bool, error) {
 func ok(result sql.Result, err error) (bool, error) {
 	if err != nil {
 		if i, ok := err.(sqlite3.Error); ok && i.ExtendedCode == sqlite3.ErrConstraintUnique {
-			return false, data.ErrNotUnique
+			return false, data.NewUniquenessError(err)
 		}
 		return false, err
 	}

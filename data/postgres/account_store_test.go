@@ -26,7 +26,7 @@ func newTestDB() (*sqlx.DB, error) {
 
 	db, err := postgres.NewDB(dbURL)
 	if err != nil {
-		return nil, errors.Wrap(err, "NewDB")
+		return nil, errors.Wrapf(err, "NewDB")
 	}
 
 	if err := postgres.MigrateDB(db); err != nil {

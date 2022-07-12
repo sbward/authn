@@ -44,13 +44,13 @@ func TestDB() (*sqlx.DB, error) {
 }
 
 func cfgFromURL(url *url.URL) *mysql.Config {
-	cfg := mysql.Config{
-		Addr:   url.Host,
-		DBName: strings.Replace(url.Path, "/", "", 1),
-		Loc:    time.UTC,
-		Net:    "tcp",
-		Params: map[string]string{"parseTime": "true"},
-	}
+	cfg := mysql.NewConfig()
+	cfg.Addr = url.Host
+	cfg.DBName = strings.Replace(url.Path, "/", "", 1)
+	cfg.Loc = time.UTC
+	cfg.Net = "tcp"
+	cfg.Params = map[string]string{"parseTime": "true"}
+
 	if url.Port() == "" {
 		cfg.Addr = cfg.Addr + ":3306"
 	}
@@ -60,7 +60,7 @@ func cfgFromURL(url *url.URL) *mysql.Config {
 			cfg.Passwd = pwd
 		}
 	}
-	return &cfg
+	return cfg
 }
 
 func ensureDB(cfg *mysql.Config) error {

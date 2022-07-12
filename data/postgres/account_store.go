@@ -5,7 +5,9 @@ import (
 	"time"
 
 	"github.com/jmoiron/sqlx"
+	"github.com/keratin/authn/v2/data"
 	"github.com/keratin/authn/v2/models"
+	"github.com/lib/pq"
 )
 
 type AccountStore struct {
@@ -74,7 +76,7 @@ func (db *AccountStore) Create(u string, p []byte) (*models.Account, error) {
 		account,
 	)
 	if err != nil {
-		return nil, err
+		return nil, checkUniquenessErr(err)
 	}
 	defer result.Close()
 	result.Next()
@@ -102,7 +104,7 @@ func (db *AccountStore) AddOauthAccount(accountID int, provider string, provider
 		"created_at":   now,
 		"updated_at":   now,
 	})
-	return err
+	return checkUniquenessErr(err)
 }
 
 func (db *AccountStore) GetOauthAccounts(accountID int) ([]*models.OauthAccount, error) {
@@ -166,8 +168,15 @@ func (db *AccountStore) SetLastLogin(id int) (bool, error) {
 
 func ok(result sql.Result, err error) (bool, error) {
 	if err != nil {
-		return false, err
+		return false, checkUniquenessErr(err)
 	}
 	count, err := result.RowsAffected()
 	return count > 0, err
+}
+
+func checkUniquenessErr(err error) error {
+	if i, ok := err.(*pq.Error); ok && i.Code.Class().Name() == "integrity_constraint_violation" {
+		return data.NewUniquenessError(err)
+	}
+	return err
 }
