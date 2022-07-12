@@ -3,9 +3,9 @@ package services
 import (
 	"strings"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/data"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/data"
 )
 
 func AccountUpdater(store data.AccountStore, cfg *app.Config, accountID int, username string) error {

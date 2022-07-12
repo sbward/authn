@@ -1,7 +1,7 @@
 package services
 
 import (
-	"github.com/keratin/authn/v2/data"
+	"github.com/sbward/authn/data"
 )
 
 func SessionBatchEnder(store data.RefreshTokenStore, accountID int) error {

@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/data/mock"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/data/mock"
 	"github.com/stretchr/testify/assert"
 )
 

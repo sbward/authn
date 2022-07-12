@@ -6,9 +6,9 @@ import (
 
 	jwt "gopkg.in/square/go-jose.v2/jwt"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/data/mock"
-	"github.com/keratin/authn/v2/tokens/sessions"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/data/mock"
+	"github.com/sbward/authn/tokens/sessions"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

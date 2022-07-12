@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"testing"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/tokens/oauth"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/tokens/oauth"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

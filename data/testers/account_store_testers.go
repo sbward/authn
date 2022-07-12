@@ -5,7 +5,7 @@ import (
 
 	"database/sql"
 
-	"github.com/keratin/authn/v2/data"
+	"github.com/sbward/authn/data"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -4,11 +4,11 @@ import (
 	"net/url"
 	"strconv"
 
-	app "github.com/keratin/authn/v2"
+	app "github.com/sbward/authn"
 
-	"github.com/keratin/authn/v2/models"
-	"github.com/keratin/authn/v2/tokens/passwordless"
 	"github.com/pkg/errors"
+	"github.com/sbward/authn/models"
+	"github.com/sbward/authn/tokens/passwordless"
 	"github.com/sirupsen/logrus"
 )
 

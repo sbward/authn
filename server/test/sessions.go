@@ -3,10 +3,10 @@ package test
 import (
 	"net/http"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/models"
-	"github.com/keratin/authn/v2/tokens/sessions"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/models"
+	"github.com/sbward/authn/tokens/sessions"
 	jose "gopkg.in/square/go-jose.v2"
 	jwt "gopkg.in/square/go-jose.v2/jwt"
 )

@@ -7,7 +7,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/keratin/authn/v2/data/private"
+	"github.com/sbward/authn/data/private"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

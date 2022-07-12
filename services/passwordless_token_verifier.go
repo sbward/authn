@@ -3,12 +3,12 @@ package services
 import (
 	"strconv"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/ops"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/ops"
 
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/tokens/passwordless"
 	"github.com/pkg/errors"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/tokens/passwordless"
 )
 
 func PasswordlessTokenVerifier(store data.AccountStore, r ops.ErrorReporter, cfg *app.Config, token string) (int, error) {

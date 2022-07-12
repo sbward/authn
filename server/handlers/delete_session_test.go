@@ -4,11 +4,11 @@ import (
 	"net/http"
 	"testing"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/lib/route"
-	"github.com/keratin/authn/v2/models"
-	"github.com/keratin/authn/v2/server/test"
-	"github.com/keratin/authn/v2/tokens/sessions"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/lib/route"
+	"github.com/sbward/authn/models"
+	"github.com/sbward/authn/server/test"
+	"github.com/sbward/authn/tokens/sessions"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

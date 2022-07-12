@@ -1,14 +1,14 @@
-module github.com/keratin/authn/v2/data/sqlite3
+module github.com/sbward/authn/data/sqlite3
 
 go 1.18
 
-replace github.com/keratin/authn/v2 => ../../
+replace github.com/sbward/authn => ../../
 
 require (
 	github.com/jmoiron/sqlx v1.3.5
-	github.com/keratin/authn/v2 v2.0.0-00010101000000-000000000000
 	github.com/mattn/go-sqlite3 v1.14.14
 	github.com/pkg/errors v0.9.1
+	github.com/sbward/authn v0.0.0-00010101000000-000000000000
 	github.com/stretchr/testify v1.8.0
 )
 

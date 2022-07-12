@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	app "github.com/keratin/authn/v2"
+	app "github.com/sbward/authn"
 )
 
 var (

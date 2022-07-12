@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/keratin/authn/v2/ops"
 	sq3 "github.com/mattn/go-sqlite3"
 	"github.com/pkg/errors"
+	"github.com/sbward/authn/ops"
 )
 
 var placeholder = "generating"

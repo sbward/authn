@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/services"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/services"
 )
 
 func GetPasswordReset(app *app.App) http.HandlerFunc {

@@ -1,7 +1,7 @@
 package data
 
 import (
-	"github.com/keratin/authn/v2/models"
+	"github.com/sbward/authn/models"
 )
 
 type AccountStore interface {

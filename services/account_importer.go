@@ -5,10 +5,10 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/models"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/models"
 )
 
 var bcryptPattern = regexp.MustCompile(`\A\$2[ayb]\$[0-9]{2}\$[A-Za-z0-9\.\/]{53}\z`)

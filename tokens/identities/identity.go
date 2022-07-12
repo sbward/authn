@@ -4,11 +4,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/keratin/authn/v2/data/private"
+	"github.com/sbward/authn/data/private"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/tokens/sessions"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/tokens/sessions"
 	"gopkg.in/square/go-jose.v2"
 	"gopkg.in/square/go-jose.v2/jwt"
 )

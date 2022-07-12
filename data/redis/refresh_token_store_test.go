@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/keratin/authn/v2/data/redis"
-	"github.com/keratin/authn/v2/data/testers"
+	"github.com/sbward/authn/data/redis"
+	"github.com/sbward/authn/data/testers"
 	"github.com/stretchr/testify/require"
 )
 

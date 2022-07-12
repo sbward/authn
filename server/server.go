@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	app "github.com/keratin/authn/v2"
+	app "github.com/sbward/authn"
 )
 
 func Server(app *app.App) {

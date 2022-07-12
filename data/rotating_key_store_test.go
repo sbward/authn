@@ -3,8 +3,8 @@ package data_test
 import (
 	"testing"
 
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/data/private"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/data/private"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

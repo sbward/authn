@@ -4,11 +4,11 @@ import (
 	"net/http"
 	"strconv"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/lib/parse"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/lib/parse"
 
 	"github.com/gorilla/mux"
-	"github.com/keratin/authn/v2/services"
+	"github.com/sbward/authn/services"
 )
 
 func PatchAccount(app *app.App) http.HandlerFunc {

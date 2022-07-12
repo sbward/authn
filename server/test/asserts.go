@@ -7,12 +7,12 @@ import (
 
 	jwt "gopkg.in/square/go-jose.v2/jwt"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/server/handlers"
-	"github.com/keratin/authn/v2/services"
-	"github.com/keratin/authn/v2/tokens/identities"
-	"github.com/keratin/authn/v2/tokens/sessions"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/server/handlers"
+	"github.com/sbward/authn/services"
+	"github.com/sbward/authn/tokens/identities"
+	"github.com/sbward/authn/tokens/sessions"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

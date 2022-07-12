@@ -1,14 +1,14 @@
 package services
 
 import (
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/lib/route"
-	"github.com/keratin/authn/v2/models"
-	"github.com/keratin/authn/v2/ops"
-	"github.com/keratin/authn/v2/tokens/identities"
-	"github.com/keratin/authn/v2/tokens/sessions"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/lib/route"
+	"github.com/sbward/authn/models"
+	"github.com/sbward/authn/ops"
+	"github.com/sbward/authn/tokens/identities"
+	"github.com/sbward/authn/tokens/sessions"
 )
 
 func SessionRefresher(

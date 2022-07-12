@@ -7,12 +7,12 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"github.com/jmoiron/sqlx"
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/data/mysql"
-	"github.com/keratin/authn/v2/data/postgres"
-	dataRedis "github.com/keratin/authn/v2/data/redis"
-	"github.com/keratin/authn/v2/data/sqlite3"
-	"github.com/keratin/authn/v2/ops"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/data/mysql"
+	"github.com/sbward/authn/data/postgres"
+	dataRedis "github.com/sbward/authn/data/redis"
+	"github.com/sbward/authn/data/sqlite3"
+	"github.com/sbward/authn/ops"
 )
 
 func NewDB(url *url.URL) (*sqlx.DB, error) {

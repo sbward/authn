@@ -3,12 +3,12 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/lib/parse"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/lib/parse"
 
-	"github.com/keratin/authn/v2/lib/route"
-	"github.com/keratin/authn/v2/server/sessions"
-	"github.com/keratin/authn/v2/services"
+	"github.com/sbward/authn/lib/route"
+	"github.com/sbward/authn/server/sessions"
+	"github.com/sbward/authn/services"
 )
 
 func PostSession(app *app.App) http.HandlerFunc {

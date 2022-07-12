@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/keratin/authn/v2/services"
+	"github.com/sbward/authn/services"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Tue Jul 12 11:14:34 2022
+# Make data base, printed on Tue Jul 12 13:22:21 2022
 
 # Variables
 
@@ -66,6 +63,8 @@ SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Pt7vKiHYCh/Listeners
 GOBIN := /Users/sam/GitHub/authn/bin
 # environment
 DISPLAY = /private/tmp/com.apple.launchd.SkK8SI40b0/org.macosforge.xquartz:0
+# makefile (from `.env', line 1)
+DB_USERNAME = authntest
 # environment
 PWD = /Users/sam/GitHub/authn
 # environment
@@ -94,7 +93,6 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
- 
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -119,6 +117,8 @@ TMPDIR = /var/folders/7p/twkr4hqx4r5bz5vzhy1tbksh0000gn/T/
 *F = $(notdir $*)
 # environment
 VSCODE_IPC_HOOK = /Users/sam/Library/Application Support/Code/1.69.0-main.sock
+# makefile (from `.env', line 2)
+DB_PASSWORD = authntest
 # environment
 MallocNanoZone = 0
 # makefile
@@ -160,7 +160,7 @@ LANG = C
 # environment
 VSCODE_PID = 1987
 # variable set hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=2/108=2%
+# Load=74/1024=7%, Rehash=0, Collisions=2/110=2%
 
 # Pattern-specific Variable Values
 
@@ -189,7 +189,6 @@ all:
 
 .PHONY: clean server test benchmarks migrate release
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -249,7 +248,7 @@ test: init
 # Not a target:
 .env:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-09 14:54:24
+#  Last modified 2022-07-12 11:46:23
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -315,6 +314,9 @@ init: /Users/sam/GitHub/authn/bin/ego
 # Load=14/1024=1%, Rehash=0, Collisions=0/41=0%
 # VPATH Search Paths
 
+ 
+make: *** No rule to make target `all'.  Stop.
+
 # No `vpath' search paths.
 
 # No general (`VPATH' variable) search path.
@@ -324,6 +326,6 @@ init: /Users/sam/GitHub/authn/bin/ego
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4082 / max = 4082 / min = 4082 / avg = 4082
 
-# Finished Make data base on Tue Jul 12 11:14:34 2022
+# Finished Make data base on Tue Jul 12 13:22:21 2022
 
  

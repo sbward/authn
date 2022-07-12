@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/keratin/authn/v2/data"
 	"github.com/pkg/errors"
+	"github.com/sbward/authn/data"
 )
 
 func AccountUnlocker(store data.AccountStore, accountID int) error {

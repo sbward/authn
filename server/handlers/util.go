@@ -5,9 +5,9 @@ import (
 	"net/url"
 	"time"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/tokens/oauth"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/tokens/oauth"
 )
 
 // nonceCookie creates or deletes a cookie containing val (the nonce)

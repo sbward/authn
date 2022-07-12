@@ -14,13 +14,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/keratin/authn/v2/data/private"
+	"github.com/sbward/authn/data/private"
 
 	// a .env file is extremely useful during development
 	_ "github.com/joho/godotenv/autoload"
-	"github.com/keratin/authn/v2/lib/oauth"
-	"github.com/keratin/authn/v2/lib/route"
-	"github.com/keratin/authn/v2/ops"
+	"github.com/sbward/authn/lib/oauth"
+	"github.com/sbward/authn/lib/route"
+	"github.com/sbward/authn/ops"
 	"golang.org/x/crypto/pbkdf2"
 )
 

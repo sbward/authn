@@ -3,8 +3,8 @@ package test
 import (
 	"net/http/httptest"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/server"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/server"
 )
 
 func Server(app *app.App) *httptest.Server {

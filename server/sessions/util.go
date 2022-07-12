@@ -3,9 +3,9 @@ package sessions
 import (
 	"net/http"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/models"
-	"github.com/keratin/authn/v2/tokens/sessions"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/models"
+	"github.com/sbward/authn/tokens/sessions"
 )
 
 func Get(r *http.Request) *sessions.Claims {

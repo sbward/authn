@@ -6,8 +6,8 @@ import (
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/models"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/models"
 )
 
 type AccountStore struct {

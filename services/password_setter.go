@@ -4,10 +4,10 @@ import (
 	"net/url"
 	"strconv"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/ops"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/ops"
 	"golang.org/x/crypto/bcrypt"
 )
 

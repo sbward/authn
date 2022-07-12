@@ -3,8 +3,8 @@ package mysql_test
 import (
 	"testing"
 
-	"github.com/keratin/authn/v2/data/mysql"
-	"github.com/keratin/authn/v2/data/testers"
+	"github.com/sbward/authn/data/mysql"
+	"github.com/sbward/authn/data/testers"
 	"github.com/stretchr/testify/require"
 )
 

@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	oauthlib "github.com/keratin/authn/v2/lib/oauth"
-	"github.com/keratin/authn/v2/lib/route"
-	"github.com/keratin/authn/v2/server/test"
+	oauthlib "github.com/sbward/authn/lib/oauth"
+	"github.com/sbward/authn/lib/route"
+	"github.com/sbward/authn/server/test"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,12 +3,12 @@ package services
 import (
 	"encoding/hex"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/lib"
-	"github.com/keratin/authn/v2/lib/oauth"
-	"github.com/keratin/authn/v2/models"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/lib"
+	"github.com/sbward/authn/lib/oauth"
+	"github.com/sbward/authn/models"
 	"golang.org/x/oauth2"
 )
 

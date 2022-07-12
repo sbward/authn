@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	app "github.com/keratin/authn/v2"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
 	jose "gopkg.in/square/go-jose.v2"
 	jwt "gopkg.in/square/go-jose.v2/jwt"
 )

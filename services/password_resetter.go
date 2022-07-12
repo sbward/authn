@@ -3,12 +3,12 @@ package services
 import (
 	"strconv"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/ops"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/ops"
 
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/tokens/resets"
 	"github.com/pkg/errors"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/tokens/resets"
 )
 
 func PasswordResetter(store data.AccountStore, r ops.ErrorReporter, cfg *app.Config, token string, password string) (int, error) {

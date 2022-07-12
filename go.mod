@@ -1,4 +1,4 @@
-module github.com/keratin/authn/v2
+module github.com/sbward/authn
 
 go 1.18
 

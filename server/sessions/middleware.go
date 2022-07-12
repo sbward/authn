@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"sync"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/models"
-	"github.com/keratin/authn/v2/tokens/sessions"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/models"
+	"github.com/sbward/authn/tokens/sessions"
 )
 
 type sessionKey int

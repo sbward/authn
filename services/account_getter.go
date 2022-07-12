@@ -1,9 +1,9 @@
 package services
 
 import (
-	"github.com/keratin/authn/v2/data"
-	"github.com/keratin/authn/v2/models"
 	"github.com/pkg/errors"
+	"github.com/sbward/authn/data"
+	"github.com/sbward/authn/models"
 )
 
 func AccountGetter(store data.AccountStore, accountID int) (*models.Account, error) {

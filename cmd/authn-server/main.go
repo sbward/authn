@@ -4,11 +4,11 @@ import (
 	"fmt"
 
 	"github.com/go-redis/redis/v8"
-	app "github.com/keratin/authn/v2"
-	dataRedis "github.com/keratin/authn/v2/data/redis"
-	"github.com/keratin/authn/v2/ops"
-	"github.com/keratin/authn/v2/server"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	dataRedis "github.com/sbward/authn/data/redis"
+	"github.com/sbward/authn/ops"
+	"github.com/sbward/authn/server"
 	"github.com/sirupsen/logrus"
 
 	"os"

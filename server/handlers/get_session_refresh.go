@@ -3,11 +3,11 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/lib/route"
-	"github.com/keratin/authn/v2/server/sessions"
-	"github.com/keratin/authn/v2/services"
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/lib/route"
+	"github.com/sbward/authn/server/sessions"
+	"github.com/sbward/authn/services"
 )
 
 func GetSessionRefresh(app *app.App) http.HandlerFunc {

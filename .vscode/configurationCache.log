@@ -1,1 +1,1 @@
-{"buildTargets":["/Users/sam/GitHub/authn/bin/ego","benchmarks","clean","init","migrate","release","server","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
+{"buildTargets":["/Users/sam/GitHub/authn/bin/ego","benchmarks","clean","init","make","migrate","release","server","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

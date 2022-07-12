@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/keratin/authn/v2/data/private"
-	"github.com/keratin/authn/v2/lib"
-	"github.com/keratin/authn/v2/ops"
 	"github.com/pkg/errors"
+	"github.com/sbward/authn/data/private"
+	"github.com/sbward/authn/lib"
+	"github.com/sbward/authn/ops"
 	"github.com/sirupsen/logrus"
 )
 

@@ -3,13 +3,13 @@ package services_test
 import (
 	"testing"
 
-	app "github.com/keratin/authn/v2"
-	"github.com/keratin/authn/v2/services"
+	app "github.com/sbward/authn"
+	"github.com/sbward/authn/services"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/keratin/authn/v2/data/mock"
+	"github.com/sbward/authn/data/mock"
 )
 
 func TestAccountUpdater(t *testing.T) {

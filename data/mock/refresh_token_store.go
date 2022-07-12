@@ -3,8 +3,8 @@ package mock
 import (
 	"encoding/hex"
 
-	"github.com/keratin/authn/v2/lib"
-	"github.com/keratin/authn/v2/models"
+	"github.com/sbward/authn/lib"
+	"github.com/sbward/authn/models"
 )
 
 type refreshTokenStore struct {
