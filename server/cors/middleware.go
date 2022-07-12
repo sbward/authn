@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/handlers"
-	app "github.com/keratin/authn"
+	app "github.com/keratin/authn/v2"
 )
 
 func Middleware(app *app.App) func(http.Handler) http.Handler {

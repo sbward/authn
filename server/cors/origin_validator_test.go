@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/server/cors"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/server/cors"
 )
 
 func TestOriginValidator(t *testing.T) {

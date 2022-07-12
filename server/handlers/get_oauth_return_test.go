@@ -9,10 +9,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	oauthlib "github.com/keratin/authn/lib/oauth"
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/server/test"
-	oauthtoken "github.com/keratin/authn/tokens/oauth"
+	oauthlib "github.com/keratin/authn/v2/lib/oauth"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/server/test"
+	oauthtoken "github.com/keratin/authn/v2/tokens/oauth"
 )
 
 func TestGetOauthReturn(t *testing.T) {

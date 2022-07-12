@@ -6,11 +6,11 @@ import (
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/ops"
-	"github.com/keratin/authn/server/cors"
-	"github.com/keratin/authn/server/sessions"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/ops"
+	"github.com/keratin/authn/v2/server/cors"
+	"github.com/keratin/authn/v2/server/sessions"
 )
 
 func Router(app *app.App) http.Handler {

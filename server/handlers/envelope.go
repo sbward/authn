@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/keratin/authn/lib/parse"
+	"github.com/keratin/authn/v2/lib/parse"
 
-	"github.com/keratin/authn/services"
+	"github.com/keratin/authn/v2/services"
 )
 
 type ServiceData struct {

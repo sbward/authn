@@ -3,12 +3,12 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/lib/parse"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/lib/parse"
 
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/server/sessions"
-	"github.com/keratin/authn/services"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/server/sessions"
+	"github.com/keratin/authn/v2/services"
 )
 
 func PostAccount(app *app.App) http.HandlerFunc {

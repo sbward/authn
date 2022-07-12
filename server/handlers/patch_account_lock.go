@@ -5,8 +5,8 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/services"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/services"
 )
 
 func PatchAccountLock(app *app.App) http.HandlerFunc {

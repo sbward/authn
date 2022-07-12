@@ -5,12 +5,12 @@ import (
 	"net/http"
 	"testing"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/data/private"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/data/private"
 	"github.com/sirupsen/logrus"
 
-	"github.com/keratin/authn/data/mock"
-	"github.com/keratin/authn/server/test"
+	"github.com/keratin/authn/v2/data/mock"
+	"github.com/keratin/authn/v2/server/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

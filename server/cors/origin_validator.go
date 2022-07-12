@@ -1,7 +1,7 @@
 package cors
 
 import (
-	"github.com/keratin/authn/lib/route"
+	"github.com/keratin/authn/v2/lib/route"
 )
 
 func OriginValidator(domains []route.Domain) func(string) bool {

@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/server/test"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/server/test"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

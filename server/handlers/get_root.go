@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"net/http"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/server/views"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/server/views"
 )
 
 func GetRoot(app *app.App) http.HandlerFunc {

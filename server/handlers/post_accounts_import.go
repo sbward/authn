@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"regexp"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/lib/parse"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/lib/parse"
 
-	"github.com/keratin/authn/services"
+	"github.com/keratin/authn/v2/services"
 )
 
 func PostAccountsImport(app *app.App) http.HandlerFunc {

@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"sync"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/models"
-	"github.com/keratin/authn/tokens/sessions"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/models"
+	"github.com/keratin/authn/v2/tokens/sessions"
 	"github.com/pkg/errors"
 )
 

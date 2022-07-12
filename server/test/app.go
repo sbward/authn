@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"net/url"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/data/mock"
-	"github.com/keratin/authn/data/private"
-	"github.com/keratin/authn/lib/oauth"
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/ops"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/data/mock"
+	"github.com/keratin/authn/v2/data/private"
+	"github.com/keratin/authn/v2/lib/oauth"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/ops"
 	"github.com/sirupsen/logrus"
 )
 

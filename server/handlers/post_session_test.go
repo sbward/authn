@@ -7,9 +7,9 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/server/test"
-	"github.com/keratin/authn/services"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/server/test"
+	"github.com/keratin/authn/v2/services"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -3,9 +3,9 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/server/sessions"
-	"github.com/keratin/authn/services"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/server/sessions"
+	"github.com/keratin/authn/v2/services"
 )
 
 func DeleteSession(app *app.App) http.HandlerFunc {

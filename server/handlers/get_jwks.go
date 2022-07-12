@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/keratin/authn"
+	app "github.com/keratin/authn/v2"
 	"gopkg.in/square/go-jose.v2"
 )
 

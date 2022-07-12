@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/keratin/authn/lib/compat"
+	"github.com/keratin/authn/v2/lib/compat"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

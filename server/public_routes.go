@@ -1,9 +1,9 @@
 package server
 
 import (
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/server/handlers"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/server/handlers"
 )
 
 func PublicRoutes(app *app.App) []*route.HandledRoute {

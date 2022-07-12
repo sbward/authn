@@ -4,86 +4,83 @@ import (
 	"net/http"
 	"net/url"
 	"testing"
-	"time"
 
-	app "github.com/keratin/authn"
-	"github.com/keratin/authn/data/mock"
-	"github.com/keratin/authn/data/redis"
-	"github.com/keratin/authn/data/sqlite3"
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/ops"
-	"github.com/keratin/authn/server/test"
+	app "github.com/keratin/authn/v2"
+	"github.com/keratin/authn/v2/data/mock"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/ops"
+	"github.com/keratin/authn/v2/server/test"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
-func BenchmarkGetSessionRefresh(b *testing.B) {
-	verify := func(res *http.Response, err error) {
-		if err != nil {
-			panic(err)
-		}
-		if res.StatusCode != http.StatusCreated {
-			panic(res.StatusCode)
-		}
-	}
+// func BenchmarkGetSessionRefresh(b *testing.B) {
+// 	verify := func(res *http.Response, err error) {
+// 		if err != nil {
+// 			panic(err)
+// 		}
+// 		if res.StatusCode != http.StatusCreated {
+// 			panic(res.StatusCode)
+// 		}
+// 	}
 
-	b.Run("mock    store", func(b *testing.B) {
-		testApp := test.App()
-		server := test.Server(testApp)
-		defer server.Close()
-		testApp.RefreshTokenStore = mock.NewRefreshTokenStore()
-		client := route.NewClient(server.URL).
-			Referred(&testApp.Config.ApplicationDomains[0]).
-			WithCookie(test.CreateSession(testApp.RefreshTokenStore, testApp.Config, 12345))
+// 	b.Run("mock    store", func(b *testing.B) {
+// 		testApp := test.App()
+// 		server := test.Server(testApp)
+// 		defer server.Close()
+// 		testApp.RefreshTokenStore = mock.NewRefreshTokenStore()
+// 		client := route.NewClient(server.URL).
+// 			Referred(&testApp.Config.ApplicationDomains[0]).
+// 			WithCookie(test.CreateSession(testApp.RefreshTokenStore, testApp.Config, 12345))
 
-		b.ResetTimer()
-		for i := 0; i < b.N; i++ {
-			verify(client.Get("/session/refresh"))
-		}
-	})
+// 		b.ResetTimer()
+// 		for i := 0; i < b.N; i++ {
+// 			verify(client.Get("/session/refresh"))
+// 		}
+// 	})
 
-	sqliteDB, err := sqlite3.NewDB("benchmarks")
-	if err != nil {
-		panic(err)
-	}
-	sqlite3.MigrateDB(sqliteDB)
+// 	sqliteDB, err := sqlite3.NewDB("benchmarks")
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	sqlite3.MigrateDB(sqliteDB)
 
-	b.Run("sqlite3 store", func(b *testing.B) {
-		testApp := test.App()
-		server := test.Server(testApp)
-		defer server.Close()
-		testApp.RefreshTokenStore = &sqlite3.RefreshTokenStore{sqliteDB, time.Hour}
-		client := route.NewClient(server.URL).
-			Referred(&testApp.Config.ApplicationDomains[0]).
-			WithCookie(test.CreateSession(testApp.RefreshTokenStore, testApp.Config, 12345))
+// 	b.Run("sqlite3 store", func(b *testing.B) {
+// 		testApp := test.App()
+// 		server := test.Server(testApp)
+// 		defer server.Close()
+// 		testApp.RefreshTokenStore = &sqlite3.RefreshTokenStore{sqliteDB, time.Hour}
+// 		client := route.NewClient(server.URL).
+// 			Referred(&testApp.Config.ApplicationDomains[0]).
+// 			WithCookie(test.CreateSession(testApp.RefreshTokenStore, testApp.Config, 12345))
 
-		b.ResetTimer()
-		for i := 0; i < b.N; i++ {
-			verify(client.Get("/session/refresh"))
-		}
-	})
+// 		b.ResetTimer()
+// 		for i := 0; i < b.N; i++ {
+// 			verify(client.Get("/session/refresh"))
+// 		}
+// 	})
 
-	redisDB, err := redis.TestDB()
-	if err != nil {
-		panic(err)
-	}
+// 	redisDB, err := redis.TestDB()
+// 	if err != nil {
+// 		panic(err)
+// 	}
 
-	b.Run("redis   store", func(b *testing.B) {
-		testApp := test.App()
-		server := test.Server(testApp)
-		defer server.Close()
-		testApp.RefreshTokenStore = &redis.RefreshTokenStore{redisDB, time.Hour}
-		client := route.NewClient(server.URL).
-			Referred(&testApp.Config.ApplicationDomains[0]).
-			WithCookie(test.CreateSession(testApp.RefreshTokenStore, testApp.Config, 12345))
+// 	b.Run("redis   store", func(b *testing.B) {
+// 		testApp := test.App()
+// 		server := test.Server(testApp)
+// 		defer server.Close()
+// 		testApp.RefreshTokenStore = &redis.RefreshTokenStore{redisDB, time.Hour}
+// 		client := route.NewClient(server.URL).
+// 			Referred(&testApp.Config.ApplicationDomains[0]).
+// 			WithCookie(test.CreateSession(testApp.RefreshTokenStore, testApp.Config, 12345))
 
-		b.ResetTimer()
-		for i := 0; i < b.N; i++ {
-			verify(client.Get("/session/refresh"))
-		}
-	})
-}
+// 		b.ResetTimer()
+// 		for i := 0; i < b.N; i++ {
+// 			verify(client.Get("/session/refresh"))
+// 		}
+// 	})
+// }
 
 func TestGetSessionRefreshSuccess(t *testing.T) {
 	testApp := test.App()

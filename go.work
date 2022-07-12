@@ -2,9 +2,6 @@ go 1.18
 
 use (
 	.
-	./app
-	./app/data/sqlite3
-	./lib
-	./ops
-	./server
+	./cmd/authn-server
+	./data/sqlite3
 )

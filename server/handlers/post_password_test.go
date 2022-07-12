@@ -7,12 +7,12 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	"github.com/keratin/authn/lib/route"
-	"github.com/keratin/authn/models"
-	"github.com/keratin/authn/server/test"
-	"github.com/keratin/authn/services"
-	"github.com/keratin/authn/tokens/resets"
-	"github.com/keratin/authn/tokens/sessions"
+	"github.com/keratin/authn/v2/lib/route"
+	"github.com/keratin/authn/v2/models"
+	"github.com/keratin/authn/v2/server/test"
+	"github.com/keratin/authn/v2/services"
+	"github.com/keratin/authn/v2/tokens/resets"
+	"github.com/keratin/authn/v2/tokens/sessions"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
