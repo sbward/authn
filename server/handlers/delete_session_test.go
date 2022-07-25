@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/lib/route"
 	"github.com/sbward/authn/models"
 	"github.com/sbward/authn/server/test"
@@ -46,7 +46,7 @@ func TestDeleteSessionFailure(t *testing.T) {
 	server := test.Server(testApp)
 	defer server.Close()
 
-	badCfg := &app.Config{
+	badCfg := &authn.Config{
 		AuthNURL:           testApp.Config.AuthNURL,
 		SessionCookieName:  testApp.Config.SessionCookieName,
 		SessionSigningKey:  []byte("wrong"),

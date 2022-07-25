@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/server/test"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
@@ -15,8 +15,8 @@ import (
 )
 
 func TestGetConfiguration(t *testing.T) {
-	app := &app.App{
-		Config: &app.Config{
+	app := &authn.App{
+		Config: &authn.Config{
 			AuthNURL: &url.URL{Scheme: "https", Host: "authn.example.com", Path: "/foo"},
 		},
 		Logger: logrus.New(),

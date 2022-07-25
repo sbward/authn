@@ -4,7 +4,7 @@ import (
 	"net/url"
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/data/mock"
 	"github.com/sbward/authn/ops"
 	"github.com/sbward/authn/services"
@@ -16,7 +16,7 @@ import (
 
 func TestPasswordlessTokenVerifier(t *testing.T) {
 	accountStore := mock.NewAccountStore()
-	cfg := &app.Config{
+	cfg := &authn.Config{
 		AuthNURL:                    &url.URL{Scheme: "http", Host: "authn.example.com"},
 		BcryptCost:                  4,
 		PasswordMinComplexity:       1,

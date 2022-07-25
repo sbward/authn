@@ -5,7 +5,7 @@ import (
 
 	"golang.org/x/crypto/bcrypt"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/data/mock"
 	"github.com/sbward/authn/services"
 	"github.com/stretchr/testify/assert"
@@ -17,7 +17,7 @@ var bcrypted = []byte("$2a$10$W5AiL6r4XBrZHc3NEcMUC.xj52oYl6YQw6YpTP1OkjFLmWfOk7
 
 func TestAccountImporter(t *testing.T) {
 	accountStore := mock.NewAccountStore()
-	cfg := &app.Config{
+	cfg := &authn.Config{
 		BcryptCost: 4,
 	}
 

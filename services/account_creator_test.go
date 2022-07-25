@@ -3,7 +3,7 @@ package services_test
 import (
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/data/mock"
 	"github.com/sbward/authn/services"
 	"github.com/stretchr/testify/assert"
@@ -14,13 +14,13 @@ func TestAccountCreatorSuccess(t *testing.T) {
 	store := mock.NewAccountStore()
 
 	testCases := []struct {
-		config   app.Config
+		config   authn.Config
 		username string
 		password string
 	}{
-		{app.Config{UsernameIsEmail: false, UsernameMinLength: 6}, "userName", "PASSword"},
-		{app.Config{UsernameIsEmail: true}, "username@test.com", "PASSword"},
-		{app.Config{UsernameIsEmail: true, UsernameDomains: []string{"rightdomain.com"}}, "username@rightdomain.com", "PASSword"},
+		{authn.Config{UsernameIsEmail: false, UsernameMinLength: 6}, "userName", "PASSword"},
+		{authn.Config{UsernameIsEmail: true}, "username@test.com", "PASSword"},
+		{authn.Config{UsernameIsEmail: true, UsernameDomains: []string{"rightdomain.com"}}, "username@rightdomain.com", "PASSword"},
 	}
 
 	for _, tc := range testCases {
@@ -38,25 +38,25 @@ func TestAccountCreatorFailure(t *testing.T) {
 	store.Create("existing@test.com", pw)
 
 	testCases := []struct {
-		config   app.Config
+		config   authn.Config
 		username string
 		password string
 		errors   services.FieldErrors
 	}{
 		// username validations
-		{app.Config{}, "", "PASSword", services.FieldErrors{{"username", "MISSING"}}},
-		{app.Config{}, "  ", "PASSword", services.FieldErrors{{"username", "MISSING"}}},
-		{app.Config{}, "existing@test.com", "PASSword", services.FieldErrors{{"username", "TAKEN"}}},
-		{app.Config{UsernameIsEmail: true}, "notanemail", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
-		{app.Config{UsernameIsEmail: true}, "@wrong.com", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
-		{app.Config{UsernameIsEmail: true}, "wrong@wrong", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
-		{app.Config{UsernameIsEmail: true}, "wrong@wrong.", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
-		{app.Config{UsernameIsEmail: true, UsernameDomains: []string{"rightdomain.com"}}, "email@wrongdomain.com", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
-		{app.Config{UsernameIsEmail: false, UsernameMinLength: 6}, "short", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
+		{authn.Config{}, "", "PASSword", services.FieldErrors{{"username", "MISSING"}}},
+		{authn.Config{}, "  ", "PASSword", services.FieldErrors{{"username", "MISSING"}}},
+		{authn.Config{}, "existing@test.com", "PASSword", services.FieldErrors{{"username", "TAKEN"}}},
+		{authn.Config{UsernameIsEmail: true}, "notanemail", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
+		{authn.Config{UsernameIsEmail: true}, "@wrong.com", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
+		{authn.Config{UsernameIsEmail: true}, "wrong@wrong", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
+		{authn.Config{UsernameIsEmail: true}, "wrong@wrong.", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
+		{authn.Config{UsernameIsEmail: true, UsernameDomains: []string{"rightdomain.com"}}, "email@wrongdomain.com", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
+		{authn.Config{UsernameIsEmail: false, UsernameMinLength: 6}, "short", "PASSword", services.FieldErrors{{"username", "FORMAT_INVALID"}}},
 		// password validations
-		{app.Config{}, "username", "", services.FieldErrors{{"password", "MISSING"}}},
-		{app.Config{PasswordMinComplexity: 2}, "username", "qwerty", services.FieldErrors{{"password", "INSECURE"}}},
-		{app.Config{UsernameIsEmail: true}, "username@test.example.com", "username@test.example.com", services.FieldErrors{{"password", "INSECURE"}}},
+		{authn.Config{}, "username", "", services.FieldErrors{{"password", "MISSING"}}},
+		{authn.Config{PasswordMinComplexity: 2}, "username", "qwerty", services.FieldErrors{{"password", "INSECURE"}}},
+		{authn.Config{UsernameIsEmail: true}, "username@test.example.com", "username@test.example.com", services.FieldErrors{{"password", "INSECURE"}}},
 	}
 
 	for _, tc := range testCases {

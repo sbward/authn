@@ -6,17 +6,26 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Tue Jul 12 13:22:21 2022
+
+# Make data base, printed on Sun Jul 24 14:52:42 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
+# environment
+RUBY_VERSION = ruby-2.1.2
 # automatic
 ?F = $(notdir $?)
+# environment
+NVM_INC = /Users/sam/.nvm/versions/node/v16.15.1/include/node
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+rvm_path = /Users/sam/.rvm
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -31,6 +40,8 @@ BIN := /Users/sam/GitHub/authn/bin
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
+# environment
+GOOGLE_APPLICATION_CREDENTIALS = /Users/sam/.config/gcloud/application_default_credentials.json
 # makefile (from `.env', line 1)
 MAKEFILE_LIST :=  Makefile .env
 # environment
@@ -38,19 +49,22 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # makefile (from `Makefile', line 5)
 VERSION := 1.15.0
 # environment
+CLOUDSDK_PYTHON = python3
+# environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 VSCODE_CWD = /
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # makefile (from `Makefile', line 10)
-PATH := /Users/sam/GitHub/authn/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PATH := /Users/sam/GitHub/authn/bin:/usr/local/Cellar/go/1.18.4/libexec/bin:/Users/sam/.rvm/gems/ruby-2.1.2/bin:/Users/sam/.rvm/gems/ruby-2.1.2@global/bin:/Users/sam/.rvm/rubies/ruby-2.1.2/bin:/Users/sam/google-cloud-sdk/bin:/Users/sam/.yarn/bin:/Users/sam/.config/yarn/global/node_modules/.bin:/Users/sam/.nvm/versions/node/v16.15.1/bin:/Users/sam/istio-1.13.4/bin:/usr/local/bin:/Users/sam/go/bin:/Users/sam/istio-1.13.4/bin:/Users/sam/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/opt/X11/bin:/Library/Apple/usr/bin:/usr/local/git/bin:/Users/sam/.cargo/bin:/Users/sam/.rvm/bin:/Users/sam/.rvm/bin:/Users/sam/.pub-cache/bin:/Users/sam/fvm/default/bin:/Users/sam/.rvm/bin:/Users/sam/.pub-cache/bin:/Users/sam/fvm/default/bin
+ 
 # makefile (from `Makefile', line 3)
 PROJECT := authn-server
 # environment
 GOPATH = /Users/sam/go
 # environment
-LaunchInstanceID = 9D2314B3-8FE3-491F-B0C9-08E51AE9F29A
+NVM_BIN = /Users/sam/.nvm/versions/node/v16.15.1/bin
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
@@ -66,7 +80,13 @@ DISPLAY = /private/tmp/com.apple.launchd.SkK8SI40b0/org.macosforge.xquartz:0
 # makefile (from `.env', line 1)
 DB_USERNAME = authntest
 # environment
+DOCKER_BUILDKIT = 1
+# environment
+rvm_bin_path = /Users/sam/.rvm/bin
+# environment
 PWD = /Users/sam/GitHub/authn
+# environment
+GEM_HOME = /Users/sam/.rvm/gems/ruby-2.1.2
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -76,21 +96,27 @@ HOME = /Users/sam
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/sam/Library/Application Support/Code/CachedData/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9
+VSCODE_CODE_CACHE_PATH = /Users/sam/Library/Application Support/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
 # environment
 LOGNAME = sam
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
+NVM_CD_FLAGS = -q
+# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
+# environment
+GEM_PATH = /Users/sam/.rvm/gems/ruby-2.1.2:/Users/sam/.rvm/gems/ruby-2.1.2@global
 # environment
 XPC_FLAGS = 0x0
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+# environment
+IRBRC = /Users/sam/.rvm/rubies/ruby-2.1.2/.irbrc
 # environment
 SHLVL = 1
 # default
@@ -100,11 +126,13 @@ USER = sam
 # makefile
 .DEFAULT_GOAL := clean
 # environment
-GOROOT = /usr/local/go
+GOROOT = /usr/local/Cellar/go/1.18.4/libexec
 # makefile (from `Makefile', line 4)
 NAME := keratin/authn-server
 # makefile (from `Makefile', line 2)
 ORG := keratin
+# environment
+rvm_version = 1.29.12 (latest)
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -116,7 +144,7 @@ TMPDIR = /var/folders/7p/twkr4hqx4r5bz5vzhy1tbksh0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/sam/Library/Application Support/Code/1.69.0-main.sock
+VSCODE_IPC_HOOK = /Users/sam/Library/Application Support/Code/1.69.1-main.sock
 # makefile (from `.env', line 2)
 DB_PASSWORD = authntest
 # environment
@@ -127,12 +155,16 @@ MAKEFLAGS = Rrqp
 MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
+# environment
+NVM_DIR = /Users/sam/.nvm
 # makefile (from `Makefile', line 6)
 MAIN := main.go
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.61950592.61950598
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.63428881.63428887
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
+# environment
+flowdesk = /Users/sam/go/src/github.com/sbward/flowdesk
 # automatic
 +F = $(notdir $+)
 # environment
@@ -144,23 +176,34 @@ MAKEFILES :=
 # automatic
 <F = $(notdir $<)
 # environment
-LC_ALL = C
+GOPRIVATE = github.com/sbward
+ 
 # environment
-SECURITYSESSIONID = 186c3
+EDITOR = code
+# environment
+LC_ALL = C
 # automatic
 ^F = $(notdir $^)
+# environment
+rvm_prefix = /Users/sam
 # default
 SUFFIXES := 
+# environment
+USE_GKE_GCLOUD_AUTH_PLUGIN = True
 # default
 .INCLUDE_DIRS = /usr/local/include
+# environment
+COMPOSE_DOCKER_CLI_BUILD = 1
 # environment
 MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1987
+VSCODE_PID = 85620
+# environment
+MY_RUBY_HOME = /Users/sam/.rvm/rubies/ruby-2.1.2
 # variable set hash-table stats:
-# Load=74/1024=7%, Rehash=0, Collisions=2/110=2%
+# Load=93/1024=9%, Rehash=0, Collisions=5/129=4%
 
 # Pattern-specific Variable Values
 
@@ -168,9 +211,9 @@ VSCODE_PID = 1987
 
 # Directories
 
-# . (device 16777225, inode 61071271): 35 files, no impossibilities.
+# . (device 16777225, inode 61071271): 33 files, no impossibilities.
 
-# 35 files, no impossibilities in 1 directories.
+# 33 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -201,8 +244,8 @@ benchmarks:
 	docker-compose up -d redis
 	TEST_REDIS_URL=redis://127.0.0.1:8701/12 \
 	go test -run=XXX -bench=. \
-	github.com/keratin/authn-server/server/meta \
-	github.com/keratin/authn-server/server/sessions
+	github.com/sbward/authn/server/meta \
+	github.com/sbward/authn/server/sessions
 	
 
 # Not a target:
@@ -214,7 +257,7 @@ benchmarks:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-04 11:02:54
+#  Last modified 2022-07-15 09:51:42
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -314,9 +357,6 @@ init: /Users/sam/GitHub/authn/bin/ego
 # Load=14/1024=1%, Rehash=0, Collisions=0/41=0%
 # VPATH Search Paths
 
- 
-make: *** No rule to make target `all'.  Stop.
-
 # No `vpath' search paths.
 
 # No general (`VPATH' variable) search path.
@@ -326,6 +366,6 @@ make: *** No rule to make target `all'.  Stop.
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4082 / max = 4082 / min = 4082 / avg = 4082
 
-# Finished Make data base on Tue Jul 12 13:22:21 2022
+# Finished Make data base on Sun Jul 24 14:52:42 2022
 
  

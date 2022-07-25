@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/models"
 	"github.com/sbward/authn/services"
 	"github.com/sirupsen/logrus"
@@ -34,7 +34,7 @@ func TestPasswordResetSender(t *testing.T) {
 	resetURL := &url.URL{Scheme: "http", Host: serverURL.Host, Path: "/reset", User: url.UserPassword("user", "pass")}
 
 	invoke := func(account *models.Account) error {
-		cfg := &app.Config{
+		cfg := &authn.Config{
 			AuthNURL:            authNURL,
 			AppPasswordResetURL: resetURL,
 			ResetSigningKey:     []byte("resets"),

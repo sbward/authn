@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/data/private"
 	"github.com/sirupsen/logrus"
 
@@ -18,9 +18,9 @@ import (
 func TestGetJWKs(t *testing.T) {
 	rsaKey, err := private.GenerateKey(512)
 	require.NoError(t, err)
-	app := &app.App{
+	app := &authn.App{
 		KeyStore: mock.NewKeyStore(rsaKey),
-		Config:   &app.Config{},
+		Config:   &authn.Config{},
 		Logger:   logrus.New(),
 	}
 
@@ -38,9 +38,9 @@ func TestGetJWKs(t *testing.T) {
 
 func BenchmarkGetJWKs(b *testing.B) {
 	rsaKey, _ := private.GenerateKey(2048)
-	app := &app.App{
+	app := &authn.App{
 		KeyStore: mock.NewKeyStore(rsaKey),
-		Config:   &app.Config{},
+		Config:   &authn.Config{},
 	}
 
 	server := test.Server(app)

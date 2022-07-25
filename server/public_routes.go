@@ -1,12 +1,12 @@
 package server
 
 import (
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/lib/route"
 	"github.com/sbward/authn/server/handlers"
 )
 
-func PublicRoutes(app *app.App) []*route.HandledRoute {
+func PublicRoutes(app *authn.App) []*route.HandledRoute {
 	var routes []*route.HandledRoute
 	originSecurity := route.OriginSecurity(app.Config.ApplicationDomains, app.Logger)
 

@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	jose "gopkg.in/square/go-jose.v2"
 	jwt "gopkg.in/square/go-jose.v2/jwt"
 )
@@ -36,7 +36,7 @@ func (c *Claims) Sign(hmacKey []byte) (string, error) {
 
 // Parse will deserialize a string into Claims if and only if the claims pass all validations. In
 // this case the token must contain a nonce already known from a different channel (like a cookie).
-func Parse(tokenStr string, cfg *app.Config, nonce string) (*Claims, error) {
+func Parse(tokenStr string, cfg *authn.Config, nonce string) (*Claims, error) {
 	token, err := jwt.ParseSigned(tokenStr)
 	if err != nil {
 		return nil, errors.Wrap(err, "ParseSigned")
@@ -66,7 +66,7 @@ func Parse(tokenStr string, cfg *app.Config, nonce string) (*Claims, error) {
 }
 
 // New creates Claims for a JWT suitable as a state parameter during an OAuth flow.
-func New(cfg *app.Config, nonce string, destination string) (*Claims, error) {
+func New(cfg *authn.Config, nonce string, destination string) (*Claims, error) {
 	return &Claims{
 		Scope:                    scope,
 		RequestForgeryProtection: nonce,

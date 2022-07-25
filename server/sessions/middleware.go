@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/pkg/errors"
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/models"
 	"github.com/sbward/authn/tokens/sessions"
 )
@@ -14,7 +14,7 @@ import (
 type sessionKey int
 type accountIDKey int
 
-func Middleware(app *app.App) func(http.Handler) http.Handler {
+func Middleware(app *authn.App) func(http.Handler) http.Handler {
 	return func(h http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			var session *sessions.Claims

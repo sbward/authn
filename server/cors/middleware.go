@@ -4,10 +4,10 @@ import (
 	"net/http"
 
 	"github.com/gorilla/handlers"
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 )
 
-func Middleware(app *app.App) func(http.Handler) http.Handler {
+func Middleware(app *authn.App) func(http.Handler) http.Handler {
 	return func(h http.Handler) http.Handler {
 		return handlers.CORS(
 			handlers.AllowedMethods([]string{"GET", "POST", "PUT", "PATCH", "DELETE"}),

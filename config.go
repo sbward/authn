@@ -1,4 +1,4 @@
-package app
+package authn
 
 import (
 	"crypto/rand"

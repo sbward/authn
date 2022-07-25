@@ -4,10 +4,10 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/data/private"
 
 	"github.com/pkg/errors"
-	app "github.com/sbward/authn"
 	"github.com/sbward/authn/tokens/sessions"
 	"gopkg.in/square/go-jose.v2"
 	"gopkg.in/square/go-jose.v2/jwt"
@@ -34,7 +34,7 @@ func (c *Claims) Sign(key *private.Key) (string, error) {
 	return jwt.Signed(signer).Claims(c).CompactSerialize()
 }
 
-func New(cfg *app.Config, session *sessions.Claims, accountID int, audience string) *Claims {
+func New(cfg *authn.Config, session *sessions.Claims, accountID int, audience string) *Claims {
 	return &Claims{
 		AuthTime: session.IssuedAt,
 		Claims: jwt.Claims{

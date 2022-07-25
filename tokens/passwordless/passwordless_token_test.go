@@ -4,14 +4,14 @@ import (
 	"net/url"
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/tokens/passwordless"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
 func TestPasswordlessToken(t *testing.T) {
-	cfg := &app.Config{
+	cfg := &authn.Config{
 		AuthNURL:                    &url.URL{Scheme: "https", Host: "authn.example.com"},
 		PasswordlessTokenSigningKey: []byte("key-a-reno"),
 		PasswordlessTokenTTL:        3600,
@@ -37,7 +37,7 @@ func TestPasswordlessToken(t *testing.T) {
 	})
 
 	t.Run("parsing with a different key", func(t *testing.T) {
-		oldCfg := app.Config{
+		oldCfg := authn.Config{
 			AuthNURL:                    cfg.AuthNURL,
 			PasswordlessTokenSigningKey: []byte("old-a-reno"),
 			PasswordlessTokenTTL:        cfg.PasswordlessTokenTTL,
@@ -51,7 +51,7 @@ func TestPasswordlessToken(t *testing.T) {
 	})
 
 	t.Run("parsing with an unknown issuer and audience", func(t *testing.T) {
-		oldCfg := app.Config{
+		oldCfg := authn.Config{
 			AuthNURL:                    &url.URL{Scheme: "https", Host: "unknown.com"},
 			PasswordlessTokenSigningKey: cfg.PasswordlessTokenSigningKey,
 			PasswordlessTokenTTL:        cfg.PasswordlessTokenTTL,

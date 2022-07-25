@@ -3,7 +3,7 @@ package services_test
 import (
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/services"
 	"github.com/stretchr/testify/assert"
 )
@@ -17,7 +17,7 @@ func TestFieldErrors(t *testing.T) {
 
 func TestUsernameValidator(t *testing.T) {
 	t.Run("email usernames", func(t *testing.T) {
-		cfg := &app.Config{UsernameIsEmail: true}
+		cfg := &authn.Config{UsernameIsEmail: true}
 
 		t.Run("good emails", func(t *testing.T) {
 			emails := []string{

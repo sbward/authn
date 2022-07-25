@@ -3,10 +3,10 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 )
 
-func GetConfiguration(app *app.App) http.HandlerFunc {
+func GetConfiguration(app *authn.App) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		WriteJSON(w, http.StatusOK, map[string]interface{}{
 			"issuer":                                app.Config.AuthNURL.String(),

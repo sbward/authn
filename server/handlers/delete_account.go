@@ -5,11 +5,11 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/services"
 )
 
-func DeleteAccount(app *app.App) http.HandlerFunc {
+func DeleteAccount(app *authn.App) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		id, err := strconv.Atoi(mux.Vars(r)["id"])
 		if err != nil {

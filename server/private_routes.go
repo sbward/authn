@@ -2,12 +2,12 @@ package server
 
 import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/lib/route"
 	"github.com/sbward/authn/server/handlers"
 )
 
-func PrivateRoutes(app *app.App) []*route.HandledRoute {
+func PrivateRoutes(app *authn.App) []*route.HandledRoute {
 	var routes []*route.HandledRoute
 	authentication := route.BasicAuthSecurity(app.Config.AuthUsername, app.Config.AuthPassword, "Private AuthN Realm")
 

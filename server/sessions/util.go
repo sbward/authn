@@ -3,7 +3,7 @@ package sessions
 import (
 	"net/http"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/models"
 	"github.com/sbward/authn/tokens/sessions"
 )
@@ -24,7 +24,7 @@ func GetAccountID(r *http.Request) int {
 	return 0
 }
 
-func Set(cfg *app.Config, w http.ResponseWriter, val string) {
+func Set(cfg *authn.Config, w http.ResponseWriter, val string) {
 	cookie := &http.Cookie{
 		Name:     cfg.SessionCookieName,
 		Value:    val,

@@ -3,12 +3,12 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/server/sessions"
 	"github.com/sbward/authn/services"
 )
 
-func DeleteSession(app *app.App) http.HandlerFunc {
+func DeleteSession(app *authn.App) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		err := services.SessionEnder(app.RefreshTokenStore, sessions.GetRefreshToken(r))
 		if err != nil {

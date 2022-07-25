@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"github.com/pkg/errors"
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	dataRedis "github.com/sbward/authn/data/redis"
 	"github.com/sbward/authn/ops"
 	"github.com/sbward/authn/server"
@@ -26,7 +26,7 @@ func main() {
 		cmd = os.Args[1]
 	}
 
-	cfg, err := app.ReadEnv()
+	cfg, err := authn.ReadEnv()
 	if err != nil {
 		fmt.Println(err)
 		fmt.Println("\nsee: https://github.com/keratin/authn-server/blob/master/docs/config.md")
@@ -44,7 +44,7 @@ func main() {
 	}
 }
 
-func serve(cfg *app.Config) {
+func serve(cfg *authn.Config) {
 	fmt.Println(fmt.Sprintf("~*~ Keratin AuthN v%s ~*~", VERSION))
 
 	// Default logger
@@ -99,7 +99,7 @@ func serve(cfg *app.Config) {
 		return
 	}
 
-	app, err := app.NewApp(cfg, db, redis, logger, errorReporter, accountStore, tokenStore, blobStore)
+	app, err := authn.NewApp(cfg, db, redis, logger, errorReporter, accountStore, tokenStore, blobStore)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -107,14 +107,14 @@ func serve(cfg *app.Config) {
 
 	fmt.Println(fmt.Sprintf("AUTHN_URL: %s", cfg.AuthNURL))
 	fmt.Println(fmt.Sprintf("PORT: %d", cfg.ServerPort))
-	if app.Config.PublicPort != 0 {
-		fmt.Println(fmt.Sprintf("PUBLIC_PORT: %d", app.Config.PublicPort))
+	if authn.Config.PublicPort != 0 {
+		fmt.Println(fmt.Sprintf("PUBLIC_PORT: %d", authn.Config.PublicPort))
 	}
 
 	server.Server(app)
 }
 
-func migrate(cfg *app.Config) {
+func migrate(cfg *authn.Config) {
 	fmt.Println("Running migrations.")
 	err := MigrateDB(cfg.DatabaseURL)
 	if err != nil {

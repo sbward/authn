@@ -1,10 +1,10 @@
-package app_test
+package authn_test
 
 import (
 	"os"
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -25,7 +25,7 @@ func TestLookupURL(t *testing.T) {
 			err := os.Setenv(envName, tc.env)
 			require.NoError(t, err)
 
-			_, err = app.LookupURL(envName)
+			_, err = authn.LookupURL(envName)
 			assert.Error(t, err, tc.env)
 		}
 	})
@@ -49,7 +49,7 @@ func TestLookupURL(t *testing.T) {
 			err := os.Setenv(envName, tc.env)
 			require.NoError(t, err)
 
-			url, err := app.LookupURL(envName)
+			url, err := authn.LookupURL(envName)
 			require.NoError(t, err)
 
 			require.Equal(t, tc.hostname, url.Hostname(), tc.env)

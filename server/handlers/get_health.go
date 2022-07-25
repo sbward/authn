@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 )
 
 type health struct {
@@ -12,7 +12,7 @@ type health struct {
 	Redis bool `json:"redis"`
 }
 
-func GetHealth(app *app.App) http.HandlerFunc {
+func GetHealth(app *authn.App) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		h := health{
 			HTTP:  true,

@@ -40,8 +40,8 @@ benchmarks:
 	docker-compose up -d redis
 	TEST_REDIS_URL=redis://127.0.0.1:8701/12 \
 		go test -run=XXX -bench=. \
-			github.com/keratin/authn-server/server/meta \
-			github.com/keratin/authn-server/server/sessions
+			github.com/sbward/authn/server/meta \
+			github.com/sbward/authn/server/sessions
 
 # Run migrations
 .PHONY: migrate

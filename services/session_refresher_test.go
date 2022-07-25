@@ -4,7 +4,7 @@ import (
 	"net/url"
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/data/mock"
 	"github.com/sbward/authn/data/private"
 	"github.com/sbward/authn/lib/route"
@@ -20,7 +20,7 @@ func TestSessionRefresher(t *testing.T) {
 	rsaKey, err := private.GenerateKey(512)
 	require.NoError(t, err)
 	keyStore := mock.NewKeyStore(rsaKey)
-	cfg := &app.Config{
+	cfg := &authn.Config{
 		AuthNURL: &url.URL{Scheme: "http", Host: "authn.example.com"},
 	}
 	refreshStore := mock.NewRefreshTokenStore()

@@ -4,9 +4,8 @@ import (
 	"net/url"
 	"strconv"
 
-	app "github.com/sbward/authn"
-
 	"github.com/pkg/errors"
+	app "github.com/sbward/authn"
 	"github.com/sbward/authn/models"
 	"github.com/sbward/authn/tokens/passwordless"
 	"github.com/sirupsen/logrus"

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"testing"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/server/test"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
@@ -13,10 +13,10 @@ import (
 )
 
 func TestGetHealth(t *testing.T) {
-	app := &app.App{
+	app := &authn.App{
 		DbCheck:    func() bool { return true },
 		RedisCheck: func() bool { return true },
-		Config:     &app.Config{},
+		Config:     &authn.Config{},
 		Logger:     logrus.New(),
 	}
 	server := test.Server(app)

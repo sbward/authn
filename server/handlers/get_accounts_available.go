@@ -3,11 +3,11 @@ package handlers
 import (
 	"net/http"
 
-	app "github.com/sbward/authn"
+	"github.com/sbward/authn"
 	"github.com/sbward/authn/services"
 )
 
-func GetAccountsAvailable(app *app.App) http.HandlerFunc {
+func GetAccountsAvailable(app *authn.App) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		account, err := app.AccountStore.FindByUsername(r.FormValue("username"))
 		if err != nil {
